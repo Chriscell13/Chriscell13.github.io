@@ -1,0 +1,124 @@
+
+
+.navbar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(126, 67, 0, 0.7);
+    padding: 5px 0;
+    opacity: 2;
+}
+
+.navbar a{
+  color: rgb(255, 255, 255);
+  padding: 10px 25px; /* Add padding as needed */
+  text-decoration: none;
+  text-align: center;
+  opacity: 1;
+  font-size: 20px;
+
+}
+
+.navbar a:hover {
+    background-color:rgb(108, 27, 236); /* Set hover background color */
+    color: rgb(0, 0, 0); /* Set hover text color */
+  }
+
+
+  .profile-picture {
+    width: 550px; /* Adjust size as needed */
+    height:550px; /* Adjust size as needed */
+    position: fixed;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    border-radius: 50%; /* Makes the container circular */
+  }
+  
+  .profile-picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: scaleX(-1); /* Reverses the image horizontally */
+  }
+  
+
+.home-text{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.tex1{
+  background-image: linear-gradient(to bottom, rgb(236, 160, 47), rgb(51, 51, 51)); /* Gradient from magenta to black */
+  -webkit-background-clip: text; /* Clip text to background */
+  color: transparent; 
+    font-size: 64px;
+    font-family: "Orbitron", sans-serif ;
+    font-weight: 900;
+    width: 50%;
+    animation: floatAnimation 5s infinite linear; /* Animation definition */
+  }
+
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0); /* Initial position */
+    }
+    50% {
+      transform: translateY(-45px); /* Mid position */
+    }
+    100% {
+      transform: translateY(0px); /* Final position */
+    }
+  }
+
+  .tex1 span :nth-child(odd) {
+    animation-delay: 0.5s; /* Delay animation for odd-numbered words */
+  }
+
+
+.parag1{
+    color: rgba(255, 255, 255, 0.658);
+    font-size: 30px;
+    font-weight: 500;
+    border: 2px solid transparent; /* Transparent border */
+    text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+     font-family: sans-serif;
+     width: 30%;
+}
+
+.home-conten{
+    height: 30;
+    align-items: center;
+    padding: 0 10%;
+}
+
+
+.back-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px; /* Set width to cover the entire viewport width */
+  height: 100vh; /* Set height to cover the entire viewport height */
+  object-fit: cover; /* Ensure the video covers the entire container */
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: 100%;
+  }
+}

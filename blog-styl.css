@@ -1,0 +1,58 @@
+.blog-body{
+    background-color: black;
+}
+
+.blog-styl article{
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to top, #0951d8, #00b48d); 
+  border: 1px solid #ffffff; /* Border around the box */
+  padding: 20px; /* Padding inside the box */
+  margin-top: 20px; /* Margin above the box */
+}
+
+
+.blog-styl h2{
+    align-items: center;
+    text-align: center;
+    color: white;
+
+}
+
+.blog-styl p{
+    color: white;
+    text-align: center;
+}
+
+.navbar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(126, 67, 0, 0.7);
+    padding: 5px 0;
+    opacity: 2;
+}
+
+.navbar a{
+  color: rgb(255, 255, 255);
+  padding: 10px 25px; /* Add padding as needed */
+  text-decoration: none;
+  text-align: center;
+  opacity: 1;
+  font-size: 20px;
+
+}
+
+.navbar a:hover {
+    background-color:rgb(108, 27, 236); /* Set hover background color */
+    color: rgb(0, 0, 0); /* Set hover text color */
+  }
+
+.home-text{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
