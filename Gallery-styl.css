@@ -1,82 +1,80 @@
+
 .body-gallery{
+    margin: 0;
+    padding: 0;
     background-image: url(img/stars_night_starry_sky_177144_1920x1080.jpg);
 }
 
-.gallery-h2{
-    background-image: linear-gradient(to bottom, rgb(252, 252, 252), rgb(86, 14, 219)); /* Gradient from magenta to black */
-  -webkit-background-clip: text; /* Clip text to background */
-  color: transparent;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bolder;
-    text-align: center;
-    
+.image-gallery{
+  align-items: center;
+  width: 80%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
 }
+
+.image-gallery img{
+  width: 100%;
+  cursor: pointer;
+  transition: 0,4s;
+}
+
+.image-gallery img:hover{
+  transform: scale(0.8) rotate(-15deg);
+  border-radius: 20px;
+  box-shadow: 0 32px 75px rgba(68,77,136, 0.2);
+}
+
+.full-img {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-img img{
+  width: 90%;
+  max-width: 900px;
+}
+
+.full-img span{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
 .navbar{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: rgba(126, 67, 0, 0.7);
-    padding: 5px 0;
-    opacity: 2;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(126, 67, 0, 0.7);
+  padding: 5px 0;
+  opacity: 2;
 }
 
 .navbar a{
-  color: rgb(255, 255, 255);
-  padding: 10px 25px; /* Add padding as needed */
-  text-decoration: none;
-  text-align: center;
-  opacity: 1;
-  font-size: 20px;
+color: rgb(255, 255, 255);
+padding: 10px 25px; /* Add padding as needed */
+text-decoration: none;
+text-align: center;
+opacity: 1;
+font-size: 20px;
 
 }
 
 .navbar a:hover {
-    background-color:rgb(108, 27, 236); /* Set hover background color */
-    color: rgb(0, 0, 0); /* Set hover text color */
-  }
-
-.home-text{
-    font-family: 'Times New Roman', Times, serif;
+  background-color:rgb(108, 27, 236); /* Set hover background color */
+  color: rgb(0, 0, 0); /* Set hover text color */
 }
-
-  
-  .image {
-    display: contents;
-    width: 100%; /* Adjust as needed */
-    height: 100%; /* Adjust as needed */
-  }
-  
-  .image img {
-    align-items: center;
-    margin: 20px;
-    width: 400px; /* Adjust size as needed */
-    height: 400px; /* Adjust size as needed */
-    border-radius: 50%; /* Make the image circular */
-    overflow: hidden;
-    transition: transform 0.3s ease;
-  }
-  
-  .image:hover img {
-    transform: scale(1.1);
-  }
-  
-  .overlay {
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .image:hover .overlay {
-    opacity: 1;
-  }

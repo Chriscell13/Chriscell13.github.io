@@ -4,36 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery page</title>
-    <link rel="stylesheet" href="styl.css">
     <link rel="stylesheet" href="Gallery-styl.css">
 </head>
-<<<<<<< HEAD
 <body class="body-gallery">
-
-    <nav class="gallery">
-    <h2 class="gallery-h2">Welcome to my Gallery</h2>
-    <nav class="image">
-    <h2>Welcome to my Gallery</h2>
-            <img src="img/andromeda_galaxy_space_stars_400474_1280x720.jpg" alt="Andromeda" width="470">
-            <img src="img/earth_planet_day_1451_1280x720.jpg" alt="Earth" width="470">
-            <img src="img/full_moon_moon_dark_166581_1280x720.jpg" alt="Moon" width="470">
-            <img src="img/galaxy_nebula_blurring_65152_1280x720.jpg" alt="Moon" width="470">
-            
-            
-            <img src="img/IMG-20240402-WA0010.jpg" alt="Andromeda" width="470">
-            <img src="img/IMG-20240402-WA0007.jpg" alt="Earth" width="470">
-            <img src="img/IMG-20240402-WA0008.jpg" alt="Earth" width="470">
-            <img src="img/saturn_planet_ring_195112_1280x720.jpg" alt="Moon" width="470">
-    
-            <img src="img/mountains_sky_view_from_above_117451_1280x720.jpg" alt="Andromeda" width="470">
-            <img src="img/trees_top_snow_113798_1280x720.jpg" alt="Earth" width="470">
-            <img src="img/sakura_flowers_spring_923548_300x168.jpg" alt="Earth" width="470">
-            <img src="img/ry_autumn_fallen_17297_300x168.jpg" alt="Moon" width="470">
+    <div class="full-img" id="fullImgBox">
+        <img src="img/andromeda_galaxy_space_stars_400474_1280x720.jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+    <nav class="image-gallery">
+            <img src="img/andromeda_galaxy_space_stars_400474_1280x720.jpg" onclick="openFullImg(this.src)">
+            <img src="img/earth_planet_day_1451_1280x720.jpg" onclick="openFullImg(this.src)">
+            <img src="img/full_moon_moon_dark_166581_1280x720.jpg" onclick="openFullImg(this.src)">
+            <img src="img/galaxy_nebula_blurring_65152_1280x720.jpg" onclick="openFullImg(this.src)">
+            <img src="img/mountains_sky_view_from_above_117451_1280x720.jpg" onclick="openFullImg(this.src)">
+            <img src="img/trees_top_snow_113798_1280x720.jpg" onclick="openFullImg(this.src)">
+            <img src="img/sakura_flowers_spring_923548_300x168.jpg" onclick="openFullImg(this.src)">
+            <img src="img/ry_autumn_fallen_17297_300x168.jpg" onclick="openFullImg(this.src)">
     
         </nav>
-    
-    </nav>
 
+    <script>
+
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(pic){
+            fullImgBox.style.display = "flex";
+            fullImg.src = pic;
+        }
+        function closeFullImg(){
+            fullImgBox.style.display = "none";
+        }
+
+
+    </script>
 
         <nav class="navbar">
         <ul>
